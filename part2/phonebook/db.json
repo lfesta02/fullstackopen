@@ -1,0 +1,24 @@
+{
+  "persons": [
+    {
+      "name": "Arto Hellas",
+      "number": "698-34342",
+      "id": 1
+    },
+    {
+      "name": "Dan Abramov",
+      "number": "12-43-234345",
+      "id": 3
+    },
+    {
+      "name": "Mary Poppendieck",
+      "number": "123-2313-23231",
+      "id": 4
+    },
+    {
+      "name": "Luca Festa",
+      "number": "605-345-3453",
+      "id": 6
+    }
+  ]
+}
