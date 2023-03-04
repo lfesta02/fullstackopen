@@ -42,6 +42,12 @@ const App = () => {
           setSuccessMessage(null)
         }, 3000)
       })
+      .catch(error => 
+        setErrorMessage(error.response.data.error),
+        setTimeout(() => {
+          setErrorMessage(null)
+        }, 5000)
+        )
     }
   
     setNewName('')
@@ -61,11 +67,19 @@ const App = () => {
       }, 3000)
     })
     .catch(error => {
-      setErrorMessage(`Information of ${changedPerson.name} has already been removed from server`)
-      setTimeout(() => {
-        setErrorMessage(null)
-      }, 5000)
-      setPersons(persons.filter(p => p.id !== id))
+      if(error.response.status === 400) {
+        setErrorMessage(error.response.data.error)
+        setTimeout(() => {
+          setErrorMessage(null)
+        }, 5000)
+      } else {
+        console.log(error);
+        setErrorMessage(`Information of ${changedPerson.name} has already been removed from server`)
+        setTimeout(() => {
+          setErrorMessage(null)
+        }, 5000)
+        setPersons(persons.filter(p => p.id !== id))
+      }
     })
   }
 

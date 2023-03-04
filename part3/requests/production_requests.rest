@@ -1,0 +1,11 @@
+POST https://morning-sky-2294.fly.dev/api/persons
+Content-Type: application/json
+
+{
+    "name": "Lionel Messi",
+    "number": "3424343-432"
+}
+
+###
+
+DELETE https://morning-sky-2294.fly.dev/api/persons/3

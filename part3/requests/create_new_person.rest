@@ -1,0 +1,26 @@
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Bill Clinton",
+    "number": "604-343-2334"
+}
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "number": "604-343-2334"
+}
+
+###
+
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Arto Jellas",
+    "number": "704-343-2334"
+}
