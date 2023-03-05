@@ -1,0 +1,20 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+    "title": "Welcome",
+    "author": "Barack Obama",
+    "url": "www.gov.blog.com",
+    "likes": 1000000
+}
+
+###
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+    "title": "Let's cook",
+    "author": "Walter White",
+    "url": "www.iamthedanger.com",
+    "likes": 434
+}
